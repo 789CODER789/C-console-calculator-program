@@ -5,11 +5,7 @@ using namespace std;
 void chiqarish(double natija){
     cout << "Javob : " << natija << '\n';
 }
-// void err(){
-//     if(cin.fail()){
-//         cout << "Xato. Iltimos, son kiriting!\n ";
-//     }
-// }
+
 int main(){
     
     char amal;
@@ -17,12 +13,8 @@ int main(){
 
     cout << "**********Kalkulyator***********";
     
-    cout << "\nAmal kiriting ( + , - , * ,: ): "; 
+    cout << "\nAmal kiriting ( + , - , * , / ): "; 
     cin >> amal;
-    // if(cin.fail()){
-    //     cout << "Xato: Iltimos, Amal kiriting ( + , - , * ,: ) kiriting!\n";
-    //     return 1;
-    // }
 
     cout << "1 - raqm : ";
     cin >> num1;
@@ -50,7 +42,7 @@ int main(){
         natija = num1 * num2;
         chiqarish(natija);
         break;
-    case ':':
+    case '/':
         if (num2 != 0) { 
                 natija = num1 / num2;
                 chiqarish(natija);
@@ -59,7 +51,7 @@ int main(){
             }
             break;
     default:
-        cout << "Xato: Amal noto'g'ri! Iltimos, + , - , * , : kiritishingiz kerak. \n";
+        cout << "Xato: Amal noto'g'ri! Iltimos, + , - , * , / kiritishingiz kerak. \n";
         break;
     }
 
